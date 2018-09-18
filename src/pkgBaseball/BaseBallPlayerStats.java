@@ -90,7 +90,7 @@ public class BaseBallPlayerStats {
 
 	public double SLG() {
 
-		double SLG = ((TB() / AB));
+		double SLG = (H + 2 * Btwo + 3 * Bthree + 4 * HR) / AB;
 		return SLG;
 
 	}
@@ -103,10 +103,10 @@ public class BaseBallPlayerStats {
 
 	}
 
-	public int TB() {
+	public double TB() {
 
-		double TB=((HR * 4) + (Bthree * 3) + (Btwo * 2) + (H - Btwo - Bthree - HR));
-		return TB();
+		double TB =((HR * 4) + (Bthree * 3) + (Btwo * 2) + (H - Btwo - Bthree - HR));
+		return TB;
 	}
 	
 }
